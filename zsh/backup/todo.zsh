@@ -1,0 +1,5 @@
+print -P "%F{red}TODO: %fsource alias needs to drop you back in the initial directory "
+print -P "%F{red}TODO: %fpython get obj from list in a dataclass using frozen "
+print -P "%F{red}TODO: %fget all keyboard shortcuts for vim into a txt file "
+print -P "%F{red}TODO: %ffunction to kill all vscode "
+print -P "%F{red}TODO: %fadd more to reference and add functionality to the function "

@@ -1,0 +1,7 @@
+print -P "%F{red}TODO: %fadd more to reference and add functionality to the function "
+print -P "%F{red}TODO: %fdeploy infra-sso to blue-qa AWS account: Users should be able to cagent login -a blue-qa and other blue accounts to access these accounts from cpairs. https://paypal.atlassian.net/jira/software/c/projects/DTCOMPUTE/boards/26497/\?selectedIssue\=DTCOMPUTE-5187 "
+print -P "%F{red}TODO: %fUse credentials process in cpairs for cagent login: cagent login writes static credentials to ~/.aws/credentials and automatically renews them. aws docs Source credentials with an external process.  https://paypal.atlassian.net/jira/software/c/projects/DTCOMPUTE/boards/26497/\?selectedIssue\=DTCOMPUTE-5188 "
+print -P "%F{red}TODO: %fHow do i do this in the nvim config.  TSInstall bash markdown markdown_inline regex "
+print -P "%F{red}TODO: %fget nvim-dap-virtualtext running "
+print -P "%F{red}TODO: %fadd a function to set starting cd folder and ~/repos/projects if none "
+print -P "%F{red}TODO: %fwrite a post for python version management "
