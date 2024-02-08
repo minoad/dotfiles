@@ -5,9 +5,9 @@ GIT_HASH ?= $(shell git log --format="%h" -n 1)
 
 IS_CPAIR ?= $(shell echo $CPAIR)
 INFRA_DIR ?= $(shell pwd)
-CONTROLLER_CONFIGS ?= $(shell pwd)/controller_configs
-ZSH_CONFIGS ?= $(shell pwd)/controller_configs/zsh
-VIM_CONFIGS ?= $(shell pwd)/controller_configs/vim
+CONTROLLER_CONFIGS ?= $(shell pwd)/
+ZSH_CONFIGS ?= $(shell pwd)/zsh
+VIM_CONFIGS ?= $(shell pwd)/vim
 
 .PHONY: install_zsh install_aws install_aws_mac install_aws_linux install_nvim_mac
 
@@ -47,21 +47,22 @@ install_oh-my-zsh:
 	fi
 
 update-active-tmux-configs:
-	make copy_reference
+	#make copy_reference
 	cp -rf $(CONTROLLER_CONFIGS)/tmux/tmux.conf ~/.tmux.conf
 
 update-active-zsh-configs:
-	make copy_reference
+	#make copy_reference
 	make install_colorls
 	make install_oh-my-zsh
 	make update-notes
+	mkdir -p ~/zsh/
 	cp -rf $(CONTROLLER_CONFIGS)/zsh/zshrc ~/.zshrc
 	cp -rf $(CONTROLLER_CONFIGS)/zsh/*.zsh ~/zsh/
 
 
 update-active-nvim-configs:
-	make copy_reference
-	rm -rf ~/.config/nvim/*
+	#make copy_reference
+	mkdir ~/.config/nvim || rm -rf ~/.config/nvim/*
 	mkdir -p ~/.config/nvim/lua/config
 	mkdir -p ~/.config/nvim/lua/plugins
 	mkdir -p ~/.config/nvim/lua/utils
